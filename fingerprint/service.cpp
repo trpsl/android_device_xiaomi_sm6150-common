@@ -37,6 +37,7 @@ status_t BiometricsFingerprint::registerAsSystemService() {
         ALOGI("Successfully registered IBiometricsFingerprint");
     }
 
+#ifdef USE_FOD
     ret = IXiaomiFingerprint::registerAsService();
     if (ret != 0) {
         ALOGE("Failed to register IXiaomiFingerprint (%d)", ret);
@@ -44,6 +45,7 @@ status_t BiometricsFingerprint::registerAsSystemService() {
     } else {
         ALOGI("Successfully registered IXiaomiFingerprint");
     }
+#endif
 
 fail:
     return ret;
