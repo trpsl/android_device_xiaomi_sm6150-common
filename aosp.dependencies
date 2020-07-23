@@ -7,7 +7,7 @@
   },
   {
     "repository"   :"trpsl/vendor_xiaomi",
-    "target_path"  :"android/xiaomi",
+    "target_path"  :"vendor/xiaomi",
     "branch"       :"ten",
     "remote"       :"gitlab"
   },
